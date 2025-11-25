@@ -30,8 +30,10 @@ It highlights layout management using CSS Grid for flexible image arrangement an
 
 ---
 
-## 📁 Project Structure
-
 ## Git Hub Link
 
 - https://github.com/alicenlok-a11y/Spot-11-25-25.git
+
+## Project Pitch Video
+
+Check out [this video](https://www.loom.com/share/e5e64b921b1a48ddb527cc2562d5fa31)
