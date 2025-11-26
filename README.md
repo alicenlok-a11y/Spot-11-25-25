@@ -32,7 +32,7 @@ It highlights layout management using CSS Grid for flexible image arrangement an
 
 ## Git Hub Link
 
-- https://github.com/alicenlok-a11y/Spot-11-25-25.git
+-https://alicenlok-a11y.github.io/Spot-11-25-25/
 
 ## Project Pitch Video
 

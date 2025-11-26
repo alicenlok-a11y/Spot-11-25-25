@@ -20,6 +20,7 @@
 .profile__name {
   font-size: 16px;
   font-weight: 500;
+  line-height: 1;
   margin: 0 0 12px 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -67,6 +68,7 @@
   font-size: 16px;
   line-height: 1;
   display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-top: auto;
   align-items: center;
@@ -84,7 +86,6 @@
 
 .profile__add-btn:hover {
   opacity: 80%;
-  background-color: #212121;
 }
 
 @media screen and (max-width: 630px) {
