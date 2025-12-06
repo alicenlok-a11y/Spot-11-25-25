@@ -112,24 +112,52 @@
       </footer>
       <div class="modal modal_is-opened"></div>
       <div class="modal__container">
-        <button class="modal__close-btn">X</button>
+        <button class="modal__close-btn"></button>
         <h2 class="modal__title">Edit profile</h2>
         <form class="modal__form">
-          <lable for="profile-name-input" class="modal__label"></lable>
-          <input
-            id="profile-name-input"
-            type="text"
-            class="modal__input"
-            placeholder="Type your name"
-          />
+          <lable for="profile-name-input" class="modal__label">
+            Name
+            <input
+              id="profile-name-input"
+              type="text"
+              class="modal__input"
+              placeholder="Type your name"
+            />
           </lable>
           <lable for="profile-description-input" class="modal__label">
-          <input
-            id="profile-description-input"
-            type="text"
-            class="modal__input"
-            placeholder="Description yourself"
-          />
+            Description
+            <input
+              id="profile-description-input"
+              type="text"
+              class="modal__input"
+              placeholder="Description yourself"
+            />
+          </lable>
+          <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
+      </div>
+      <div class="modal modal_is-opened"></div>
+      <div class="modal__container">
+        <button class="modal__close-btn"></button>
+        <h2 class="modal__title">New post</h2>
+        <form class="modal__form">
+          <lable for="Card-image-input" class="modal__label">
+            Image link
+            <input
+              id="Card-image-input"
+              type="url"
+              class="modal__input"
+              placeholder="Paste a link to the picture"
+            />
+          </lable>
+          <lable for="Card-caption-input" class="modal__label">
+            Caption
+            <input
+              id="Card-caption-input"
+              type="text"
+              class="modal__input"
+              placeholder="Type your caption"
+            />
           </lable>
           <button type="submit" class="modal__submit-btn">Save</button>
         </form>
