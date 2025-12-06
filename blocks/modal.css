@@ -40,3 +40,12 @@
   display: flex;
   flex-direction: column;
 }
+
+.modal__label {
+  margin: 0 0 32px;
+}
+
+.modal__input {
+  display: block;
+  margin: 8px 0 0;
+}
