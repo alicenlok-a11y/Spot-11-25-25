@@ -32,7 +32,7 @@ editProfileCloseBtn.addEventListener("click", () => {
 });
 
 newPostCloseBtn.addEventListener("click", () => {
-  newPostModal.classList.remove("modal__is-openedd");
+  newPostModal.classList.remove("modal__is-opened");
 });
 
 function handleEditProfileSubmit(evt) {
@@ -44,10 +44,16 @@ function handleEditProfileSubmit(evt) {
   editProfileModal.classList.remove("modal__is-opened");
 }
 
+const cardImageInput = document.querySelector("#card-image-input");
+const cardCaptionInput = document.querySelector("#card-caption-input");
+
 function handleNewPostFormSubmit(evt) {
   evt.preventDefault();
-  console.log("New post submitted");
-  newPostModal.classList.remove("modal__is-opened");
+
+  console.log(cardImageInput.value);
+  console.log(cardCaptionInput.value);
+
+  newPostModal.classList.remove("modal_is-opened");
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
