@@ -53,6 +53,7 @@ function handleNewPostFormSubmit(evt) {
   console.log(cardImageInput.value);
   console.log(cardCaptionInput.value);
 
+  evt.target.reset();
   newPostModal.classList.remove("modal_is-opened");
 }
 
