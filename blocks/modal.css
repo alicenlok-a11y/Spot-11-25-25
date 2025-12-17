@@ -13,6 +13,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s linear;
+  padding: 0;
 }
 
 .modal__is-opened {
@@ -42,6 +43,7 @@
   border: 0;
   cursor: pointer;
   padding: 0;
+  background-repeat: no-repeat;
 }
 
 .modal__close-btn:hover {
@@ -104,8 +106,6 @@
 
   .modal__container {
     padding: 12px;
-    top: 22px;
-    right: 12px;
   }
 
   .modal__submit-btn {
