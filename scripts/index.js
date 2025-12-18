@@ -32,7 +32,7 @@ editProfileBtn.addEventListener("click", () => {
 });
 
 newPostBtn.addEventListener("click", () => {
-  newPostModal.classList.add("modal__is-opened");
+  openModal(newPostModal);
 });
 
 editProfileCloseBtn.addEventListener("click", () => {
@@ -40,7 +40,7 @@ editProfileCloseBtn.addEventListener("click", () => {
 });
 
 newPostCloseBtn.addEventListener("click", () => {
-  closeModal(editProfileModal);
+  closeModal(newPostModal);
 });
 
 function handleEditProfileSubmit(evt) {
@@ -61,7 +61,7 @@ function handleNewPostFormSubmit(evt) {
   console.log(cardCaptionInput.value);
 
   evt.target.reset();
-  closeModal(editProfileModal);
+  closeModal(newPostModal);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);

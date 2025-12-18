@@ -13,7 +13,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s linear;
-  padding: 0;
+  padding: 10px;
 }
 
 .modal__is-opened {
