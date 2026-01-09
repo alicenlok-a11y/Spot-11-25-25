@@ -110,6 +110,14 @@ function handleNewPostFormSubmit(evt) {
   console.log(cardImageInput.value);
   console.log(cardCaptionInput.value);
 
+  const inputValues = {
+    name: captionInputEl.value,
+    link: linkInputEl.value,
+  };
+
+  const cardElement = getCardElement(inputValues);
+  cardsList.prepend(cardElement);
+
   evt.target.reset();
   closeModal(newPostModal);
 }
