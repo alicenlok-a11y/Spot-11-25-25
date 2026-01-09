@@ -11,7 +11,6 @@
   align-items: center;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   opacity: 0;
-  visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s linear;
   padding: 10px;
 }
@@ -73,7 +72,7 @@
   padding: 16px 12px;
   box-sizing: border-box;
   width: 100%;
-  border: 1px solid rgb(33, 33, 33, 0.4);
+  border: 1px solid rgb(33 33 33 / 0.4)
   border-radius: 8px;
   font-size: 20px;
   line-height: 100%;
@@ -81,7 +80,7 @@
 
 .modal__input::placeholder {
   color: #212121;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .modal__submit-btn {

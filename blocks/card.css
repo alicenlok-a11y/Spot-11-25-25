@@ -29,17 +29,27 @@
 }
 
 .card__like-btn {
-  opacity: 40%;
+  opacity: 0.4;
   background-image: url(../images/Like-Icon.svg);
   cursor: pointer;
   width: 23px;
   height: 20px;
   border: none;
   background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.card__like-button_active {
+  background-image: url(../images/Like-Icon.svg);
+  opacity: 1;
 }
 
 .card__like-btn:hover {
   opacity: 1;
+}
+
+.card__like-button_active:hover {
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 630px) {

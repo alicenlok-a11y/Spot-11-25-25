@@ -48,7 +48,7 @@
   padding: 0;
   line-height: 1;
   margin-top: auto;
-  opacity: 70%;
+  opacity: 0.7;
   background: transparent;
   border: none;
   outline: none;
@@ -88,7 +88,7 @@
   opacity: 80%;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
     max-width: 288px;
