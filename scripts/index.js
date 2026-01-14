@@ -9,25 +9,25 @@ const initialCards = [
   },
   {
     name: "Restaurant terrace",
-    link: "./images/spots-images/2-photo-by-ceiline-from-pexels.jpg",
+    link: "../images/2-photo-by-ceiline-from-pexels_compressed.jpg",
   },
   {
     name: "An outdoor cafe",
-    link: "./images/spots-images/3-photo-by-tubanur-dogan-from-pexels.jpg",
+    link: "../images/3-photo-by-tubanur-dogan-from-pexels_compressed.jpg",
   },
   {
     name: "A very long bridge, over the forest communist",
-    link: "./images/spots-images/4-photo-by-maurice-laschet-from-pexels.jpg",
+    link: "../images/4-photo-by-maurice-laschet-from-pexels.webp",
   },
 
   {
     name: "Tunnel with morning light",
-    link: "./images/spots-images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+    link: "../images/5-photo-by-van-anh-nguyen-from-pexels.webp",
   },
 
   {
     name: "Mountain house",
-    link: "./images/spots-images/6-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "../images/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
 
