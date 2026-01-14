@@ -3,105 +3,147 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spots</title>
-    <meta name="author" content="Kenny Tangonan" />
-    <meta name="description" content="Spots Interactive Photo App." />
-    <meta name="keywords" content="Interactive, Image sharing, Application" />
+    <meta
+      name="description"
+      content="The annoying project i have every dealt with. 3rd times the charm."
+    />
+    <meta name="author" content="Giacomo" />
+    <meta name="keywords" content="image stuff" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Spot</title>
   </head>
-
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spots logo" class="header__logo" />
+        <img
+          src="./images/spots-images/logo-svg.svg"
+          alt="White Palace logo"
+          class="header__logo"
+        />
       </header>
-
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
-            alt="Bessie Coleman"
+            src="./images/spots-images/avatar.jpg"
+            alt="Bessie"
             class="profile__avatar"
           />
-
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
-              <img src="./images/pencil.svg" alt="Edit Icon" /> Edit Profile
+              <img
+                src="./images/spots-images/pencil.svg.svg"
+                alt="Pencil icon"
+              />Edit Profile
             </button>
           </div>
-
-          <button type="button" class="profile__add-btn">
-            <img src="./images/Plus.svg" alt="Plus Icon" /> New Post
+          <button type="button" class="profile__new-post-btn">
+            <img src="./images/spots-images/plus.svg.svg" alt="Plus icon" /> New
+            Post
           </button>
         </section>
-
         <section class="cards page__section">
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
-                <button class="card__delete-button" type="button">DEL</button>
-                <img src="#" alt="" class="card__image" />
+                <button class="card__delete-button" type="button"></button>
+                <img class="card__image" src="" alt="" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
-                  <button type="button" class="card__like-btn"></button>
-                  <button class="card__delete"></button>
+                  <button type="button" class="card__like-button"></button>
                 </div>
               </li>
             </template>
           </ul>
         </section>
       </main>
-
-      <footer class="footer">
-        <p class="footer__copyright">2025 &copy; Spots</p>
+      <footer class="footer page__section">
+        <p class="footer__copyright">2025 &copy; White Palace</p>
       </footer>
-
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button class="modal__close-btn" type="button"></button>
-          <h2 class="modal__title">Edit profile</h2>
-
-          <form class="modal__form">
+          <button type="button" class="modal__close-btn"></button>
+          <h2 class="modal__title">Edit Profile</h2>
+          <form class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label">
               Name
               <input
                 id="profile-name-input"
                 type="text"
+                minlength="2"
+                maxlength="40"
                 class="modal__input"
                 placeholder="Type your name"
               />
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
-
             <label for="profile-description-input" class="modal__label">
               Description
               <input
                 id="profile-description-input"
                 type="text"
+                minlength="2"
+                maxlength="200"
                 class="modal__input"
                 placeholder="Describe yourself"
               />
+              <span id="card-image-input-error" class="modal__error"></span>
             </label>
-
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
-
-      <div class="modal modal_is-opened modal_type_preview" id="preview-modal">
-        <div class="modal__image-container">
-          <button
-            class="modal__close-btn modal__close-btn_type_preview"
-            type="button"
-          ></button>
-          <img src="#" alt="" class="modal__image" />
-          <p class="modal__caption"></p>
+      <div class="modal" id="new-post-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn"></button>
+          <h2 class="modal__title">New Post</h2>
+          <form class="modal__form" id="card-form" novalidate>
+            <label for="card-image-input" class="modal__label">
+              Image
+              <input
+                id="card-image-input"
+                type="url"
+                class="modal__input"
+                required
+                placeholder="Place a link to the picture"
+              />
+              <span id="card-image-input-error" class="modal__error"></span>
+            </label>
+            <label for="caption-input" class="modal__label">
+              Caption
+              <input
+                id="caption-input"
+                type="text"
+                minlength="2"
+                maxlength="30"
+                class="modal__input"
+                placeholder="Type your Caption"
+              />
+              <span id="caption-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
         </div>
       </div>
     </div>
 
+    <div class="modal modal_type_preview" id="preview-modal">
+      <div class="modal__image-container">
+        <button
+          type="button"
+          class="modal__close-btn modal__close-btn_type_preview"
+        ></button>
+        <img src="#" alt="" class="modal__image" />
+        <p class="modal__caption"></p>
+      </div>
+    </div>
+
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
