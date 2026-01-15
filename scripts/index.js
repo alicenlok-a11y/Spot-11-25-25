@@ -140,7 +140,6 @@ function handleAddCardSubmit(evt) {
   });
   cardsList.prepend(cardElemant);
   evt.target.reset();
-  disableButton(modal__button);
   closeModal(newPostModal);
 }
 newPostForm.addEventListener("submit", handleAddCardSubmit);
