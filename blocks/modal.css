@@ -133,7 +133,7 @@
 }
 
 .modal__error {
-  display: block;
+  display: none;
   color: #ff0000b2;
   font-size: 16px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -162,7 +162,7 @@
   color: #2121214d;
 }
 
-.modal .modal__submit-btn-disable {
+.modal__submit-btn-disable {
   opacity: 0.7;
 }
 
