@@ -150,3 +150,32 @@ initialCards.forEach(function (item) {
   const cardElemant = getCardElement(item);
   cardsList.append(cardElemant);
 });
+
+resetValidation(editProfileForm, settings);
+
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-open");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
+function openModal(modal) {
+  modal.classList.add("modal_is-open");
+  document.addEventListener("keydown", handleEscClose);
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-open");
+  document.removeEventListener("keydown", handleEscClose);
+}
+
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});

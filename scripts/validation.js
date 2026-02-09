@@ -38,19 +38,17 @@ const checkInputValidity = (formElement, inputElement, config) => {
   }
 };
 
-const hasInvalidInput = (inputList, buttonElement) => {
-  inputList.some((input) => {
-    return !input.validity.valid;
-  });
+const hasInvalidInput = (inputList) => {
+  return inputList.some((input) => !input.validity.valid);
 };
 
 const toggleButtonState = (inputList, buttonElement, config) => {
   if (hasInvalidInput(inputList)) {
     buttonElement.disabled = true;
-    buttonElement.classList.add("config.inactiveButtonClass");
+    buttonElement.classList.add(config.inactiveButtonClass);
   } else {
     buttonElement.disabled = false;
-    buttonElement.classList.remove("config.inactiveButtonClass");
+    buttonElement.classList.remove(config.inactiveButtonClass);
   }
 };
 
@@ -58,14 +56,13 @@ const resetValidation = (formElement, config) => {
   const inputList = Array.from(
     formElement.querySelectorAll(config.inputSelector),
   );
+
   inputList.forEach((input) => {
     hideInputError(formElement, input, config);
   });
 
   const buttonElement = formElement.querySelector(config.submitButtonSelector);
-  if (buttonElement) {
-    toggleButtonState(inputList, buttonElement, config);
-  }
+  toggleButtonState(inputList, buttonElement, config);
 };
 
 const setEventListeners = (formElement, config) => {
@@ -77,7 +74,7 @@ const setEventListeners = (formElement, config) => {
   toggleButtonState(inputList, buttonElement, config);
 
   inputList.forEach((inputElement) => {
-    inputElement.addEventListener("input", function () {
+    inputElement.addEventListener("input", () => {
       checkInputValidity(formElement, inputElement, config);
       toggleButtonState(inputList, buttonElement, config);
     });
@@ -86,11 +83,12 @@ const setEventListeners = (formElement, config) => {
 
 const disableButton = (buttonElement) => {
   buttonElement.disabled = true;
-  buttonElement.classList.add("config.inactiveButtonClass");
+  buttonElement.classList.add(settings.inactiveButtonClass);
 };
 
 const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
+
   formList.forEach((formElement) => {
     setEventListeners(formElement, config);
   });
