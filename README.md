@@ -36,4 +36,4 @@ It highlights layout management using CSS Grid for flexible image arrangement an
 
 ## Project Pitch Video
 
-## Check out [this video](https://www.loom.com/share/e5e64b921b1a48ddb527cc2562d5fa31)
+## Check out [this video](https://www.loom.com/share/d9d6cadbcce640f2910a07e08afb2cb6)
