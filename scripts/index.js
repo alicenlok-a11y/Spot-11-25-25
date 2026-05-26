@@ -1,3 +1,8 @@
+import "../pages/index.css";
+
+import {}
+import Api from "../scripts/Api.js";
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -30,6 +35,21 @@ const initialCards = [
     link: "../images/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "c56e30dc-2883-4270-a59e-b2f7bae969c6",
+    "Content-Type": "application/json",
+  },
+});
+
+api.getInitialCards().then((cards) => {
+  cards.forEach(function (item) {
+    const cardElement = getCardElement(item);
+    cardsList.append(cardElement);
+  });
+});
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -146,10 +166,6 @@ function handleAddCardSubmit(evt) {
   closeModal(newPostModal);
 }
 newPostForm.addEventListener("submit", handleAddCardSubmit);
-initialCards.forEach(function (item) {
-  const cardElemant = getCardElement(item);
-  cardsList.append(cardElemant);
-});
 
 resetValidation(editProfileForm, settings);
 
